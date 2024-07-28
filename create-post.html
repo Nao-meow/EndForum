@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="create-post-container">
+        <h2>Создать новый пост</h2>
+        <form id="post-form">
+            <label for="post-title">Название поста:</label>
+            <input type="text" id="post-title" required>
+            <label for="post-author">Имя автора:</label>
+            <input type="text" id="post-author" required>
+            <label for="post-content">Контент поста:</label>
+            <textarea id="post-content" required></textarea>
+            <label for="post-code">Код (укажите язык):</label>
+            <textarea id="post-code"></textarea>
+            <label for="code-lang">Язык программирования:</label>
+            <input type="text" id="code-lang">
+            <button type="submit">Создать</button>
+        </form>
+    </div>
+    <script src="create-post.js"></script>
+</body>
+</html>
