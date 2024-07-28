@@ -15,18 +15,23 @@ body, html {
     top: 0;
     left: 0;
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .main-block1 {
     background-color: rgba(112, 112, 112, 0.726);
     width: 95vw;
+    max-width: 1200px; /* Ограничение максимальной ширины */
     height: 60vw;
+    max-height: 800px; /* Ограничение максимальной высоты */
     z-index: 3;
     border-radius: 20px;
     display: flex;
@@ -46,7 +51,9 @@ body, html {
 .navigation-block {
     background-color: rgba(112, 112, 112, 0.726);
     width: 95vw;
+    max-width: 1200px; /* Ограничение максимальной ширины */
     height: 5vw;
+    max-height: 80px; /* Ограничение максимальной высоты */
     z-index: 1;
     border-radius: 20px;
     display: flex;
@@ -59,13 +66,16 @@ body, html {
 .logo-image {
     position: absolute;
     width: 50vw;
+    max-width: 600px; /* Ограничение максимальной ширины */
     height: 8vw;
+    max-height: 100px; /* Ограничение максимальной высоты */
     left: 25vw;
     top: 0.5vw;
 }
 
 #posts-container {
     width: 90vw;
+    max-width: 1150px; /* Ограничение максимальной ширины */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +91,9 @@ body, html {
 .post-z1 {
     background-color: rgba(112, 112, 112, 0.726);
     width: 90vw;
+    max-width: 1150px; /* Ограничение максимальной ширины */
     height: 5vw;
+    max-height: 80px; /* Ограничение максимальной высоты */
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -104,7 +116,8 @@ body, html {
 #create-post-button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
+    font-size: 2vw;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -117,6 +130,7 @@ body, html {
 .create-post-container, .post-container {
     background-color: rgba(255, 255, 255, 0.9);
     width: 80vw;
+    max-width: 1000px; /* Ограничение максимальной ширины */
     padding: 2vw;
     border-radius: 20px;
     box-sizing: border-box;
@@ -186,4 +200,53 @@ body, html {
 .post-container pre code[class*="language-"] {
     padding: 0;
     background: none;
+}
+
+@media (max-width: 600px) {
+    .main-block1 {
+        width: 100%;
+        height: auto;
+        padding-top: 5vw;
+    }
+
+    .navigation-block {
+        width: 100%;
+        height: 10vw;
+    }
+
+    .logo-image {
+        width: 80vw;
+        height: auto;
+        left: 10vw;
+        top: 1vw;
+    }
+
+    .post-z1 {
+        width: 100%;
+        height: auto;
+        margin-top: 5vw;
+        padding: 2vw;
+    }
+
+    .create-post-container, .post-container {
+        width: 90%;
+        padding: 5vw;
+    }
+
+    .create-post-container h2, .post-container h2 {
+        font-size: 5vw;
+    }
+
+    .create-post-container label, .post-container label {
+        font-size: 3vw;
+    }
+
+    .create-post-container input[type="text"], .create-post-container textarea, .post-container input[type="text"], .post-container textarea {
+        font-size: 3vw;
+    }
+
+    .create-post-container button {
+        padding: 2vw;
+        font-size: 3vw;
+    }
 }
